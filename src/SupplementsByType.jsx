@@ -12,7 +12,7 @@ const SupplementsByType = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5500/supplements")
+      .get("https://muscleblaze-server.onrender.com/supplements")
       .then((response) => {
         if (response.data && Array.isArray(response.data)) {
           const uniqueTypes = [...new Set(response.data.map((t) => t.type))];
@@ -29,7 +29,7 @@ const SupplementsByType = () => {
     setError(null);
 
     axios
-      .get(`http://localhost:5500/supplements/type/${type}`)
+      .get(`https://muscleblaze-server.onrender.com/supplements/type/${type}`)
       .then((response) => {
         setSupplements(response.data.supplementList || []);
         setLoading(false);

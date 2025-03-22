@@ -9,7 +9,7 @@ const Supplements = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5500/supplements")
+      .get("https://muscleblaze-server.onrender.com/supplements")
       .then((response) => {
         console.log("API Response:", response.data); // Debugging
         if (Array.isArray(response.data)) {

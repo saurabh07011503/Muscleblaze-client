@@ -12,7 +12,7 @@ const SupplementsById = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5500/supplements/${id}`)
+      .get(`https://muscleblaze-server.onrender.com/supplements/${id}`)
       .then((response) => {
         setSupplement(response.data.supplement);
         setLoading(false);
